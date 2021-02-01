@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Free CRM Test automation regression suite"
+       thread-count="1" parallel="tests" verbose="3">
+
+    <listeners>
+        <listener
+                class-name="com.crm.qa.listeners.ExtentReportListener" />
+        <listener
+                class-name="com.crm.qa.listeners.AllureReportListener" />
+
+    </listeners>
+
+    <test name="Login page Test">
+        <classes>
+            <class name="com.crm.qa.testPages.LoginPageTest" />
+        </classes>
+    </test>
+
+</suite>
+
+
+
+
