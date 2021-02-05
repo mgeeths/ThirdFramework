@@ -14,6 +14,7 @@ public class LoginPage {
     private By usernameLc = By.name("email");
     private By passwordLc = By.name("password");
     private By loginBtn = By.cssSelector("div.button");
+    private By loginPageHeader = By.xpath("(//div[contains(@class, 'header')])[1]");
     private ElemUtils elemUtils;
     private final Logger logger = LogManager.getLogger(LoginPage.class);
 
@@ -35,6 +36,7 @@ public class LoginPage {
         elemUtils.doSendKeys(usernameLc,username);
         elemUtils.doSendKeys(passwordLc,password);
         elemUtils.doClick(loginBtn);
+        elemUtils.waitForElement(loginPageHeader);
     }
 
 }
