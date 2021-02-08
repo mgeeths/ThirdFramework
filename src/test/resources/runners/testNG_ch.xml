@@ -15,7 +15,10 @@
     <test name="Login page Test">
         <classes>
             <class name="com.crm.qa.testPages.LoginPageTest" />
-
+        </classes>
+    </test>
+    <test name="Common page Test">
+        <classes>
             <class name="com.crm.qa.testPages.CommonPageTest" />
         </classes>
     </test>
