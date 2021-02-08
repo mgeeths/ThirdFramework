@@ -15,7 +15,7 @@ public class CommonPageTest extends BaseTest {
 
     @DataProvider
     public Object[][] getSearchNames(){
-        return new Object[][]{{"Payal"},{"Sheetal"}, {"Rupal"}, {"Monal"}};
+        return new Object[][]{{"Payal"},{"Sheetal"}, {"Rupal"}, {"Monal"},{"Koyal"},{"Kajal"}};
     }
 
     @Test(dataProvider = "getSearchNames")
