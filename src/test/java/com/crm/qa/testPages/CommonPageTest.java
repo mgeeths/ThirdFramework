@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CommonPagesTest extends BaseTest {
+public class CommonPageTest extends BaseTest {
 
     @BeforeClass
     public void commonPageSetup(){
@@ -18,10 +18,10 @@ public class CommonPagesTest extends BaseTest {
         return new Object[][]{{"Payal"},{"Sheetal"}, {"Rupal"}, {"Monal"}};
     }
 
-    @Test
-    public void verifyDoSearch(){
-        commonPage.doSearch("Payal");
+    @Test(dataProvider = "getSearchNames")
+    public void verifySearchHeaderContainsSearchText(String name){
+        commonPage.doSearch(name);
         String header = commonPage.getSearchResultHeader();
-        Assert.assertTrue(commonPage.checkValueOfSearchResults("Payal"));
+        Assert.assertTrue(commonPage.checkValueOfSearchResults(name));
     }
 }
